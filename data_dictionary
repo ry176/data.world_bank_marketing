@@ -1,28 +1,19 @@
 1. DESCRIPTION
-The data is related to direct marketing campaigns of a Portuguese banking institution. Predict if client will subscribe.
+The data is related to direct marketing campaigns of a Portuguese banking institution. Predict if client will subscribe the bank's term deposits.
 
 2. SUMMARY
-2.1 Source:
-[Moro et al., 2014] S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014
+2.1 Data Set Information:
 
-2.2 Data Set Information:
+The data comes from data.world website. The link is https://data.world/uci/bank-marketing
+It is related with direct marketing campaigns of a Portuguese banking institution. 
+The marketing campaigns of the bank were based on phone calls. 
+Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
 
-The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
+2.2 Attribute Information:
 
-2.3 There are four datasets:
+2.2.1 Input variables:
 
-bank-additional-full.csv with all examples (41188) and 20 inputs, ordered by date (from May 2008 to November 2010), very close to the data analyzed in [Moro et al., 2014]
-bank-additional.csv with 10% of the examples (4119), randomly selected from 1), and 20 inputs.
-bank-full.csv with all examples and 17 inputs, ordered by date (older version of this dataset with less inputs).
-bank.csv with 10% of the examples and 17 inputs, randomly selected from 3 (older version of this dataset with less inputs).
-The smallest datasets are provided to test more computationally demanding machine learning algorithms (e.g., SVM).
-The classification goal is to predict if the client will subscribe (yes/no) a term deposit (variable y).
-
-2.4 Attribute Information:
-
-2.4.1 Input variables:
-
-2.4.1.1 bank client data:
+2.2.1.1 bank client data:
 1 - age (numeric)
 2 - job : type of job (categorical: 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')
 3 - marital : marital status (categorical: 'divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)
@@ -31,7 +22,7 @@ The classification goal is to predict if the client will subscribe (yes/no) a te
 6 - housing: has housing loan? (categorical: 'no','yes','unknown')
 7 - loan: has personal loan? (categorical: 'no','yes','unknown')
 
-2.4.1.2 related with the last contact of the current campaign:
+2.2.1.2 related with the last contact of the current campaign:
 8 - contact: contact communication type (categorical: 'cellular','telephone')
 9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
 10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')
@@ -42,12 +33,12 @@ plus: other attributes:
 14 - previous: number of contacts performed before this campaign and for this client (numeric)
 15 - poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')
 
-2.4.1.3 social and economic context attributes
+2.2.1.3 social and economic context attributes
 16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)
 17 - cons.price.idx: consumer price index - monthly indicator (numeric)
 18 - cons.conf.idx: consumer confidence index - monthly indicator (numeric)
 19 - euribor3m: euribor 3 month rate - daily indicator (numeric)
 20 - nr.employed: number of employees - quarterly indicator (numeric)
 
-2.4.1.4 Output variable (desired target):
+2.2.2 Output variable (desired target):
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
